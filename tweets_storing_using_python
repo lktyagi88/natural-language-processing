@@ -1,0 +1,15 @@
+import twitter
+
+Consumer_Key="PqbLBImAj5dqlOfHcwRPZF2vH"
+Consumer_Secret="vlrhBmf5C4QI4pKlKn5TG4Xif4Y285srao6W9ccOOVSlch7bDm"
+Access_Token="1021593674822512640-0hbHau6KUiRSllnuUJ66iqN8UZGugQ"
+Access_Token_Secret="alUSLyXkjCY640nvnHcwNgVUnIfyNEYHyeyS2ANFTxoaM"
+
+api = twitter.Api(consumer_key=Consumer_Key,
+                  consumer_secret=Consumer_Secret,
+                  access_token_key=Access_Token,
+                  access_token_secret=Access_Token_Secret)
+
+search = api.GetSearch("Repatha")
+for tweet in search:
+    print(tweet.id,tweet.text)
